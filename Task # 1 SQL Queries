@@ -1,0 +1,30 @@
+# Write a query which select all female customers
+SELECT
+  *
+FROM
+  CUSTOMER
+WHERE
+  GENDER = 'female'
+;
+
+
+# Write a query which prints out all customer names with the number of orders they did
+SELECT
+  COUNT(ORDER.FK_CUSTOMER), CUSTOMER.FIRST_NAME, CUSTOMER.LAST_NAME
+FROM
+  CUSTOMER
+INNER JOIN
+  ORDER
+ON
+  CUSTOMER.ID = ORDER.FK_CUSTOMER
+GROUP BY
+  CUSTOMER.ID
+
+
+# Write a query which prints out customers with the money they spend excluding customers without any orders
+
+
+
+# Write a query which prints out the order nr of all orders with at least 2 items
+
+# Write a query that will pair the oldest male customer with the oldest female customer and so on (second oldest male paired with second oldest female...). Sample output:
